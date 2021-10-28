@@ -1,7 +1,7 @@
 const Transfer = () => {
     return (
       <>
-        transfer
+        <div>unfortunately stii in development</div>
       </>
     );
   };

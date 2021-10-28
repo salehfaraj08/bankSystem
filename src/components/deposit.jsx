@@ -1,7 +1,7 @@
 const Deposit = () => {
   return (
     <>
-      deposit
+      <div>unfortunately stii in development</div>
     </>
   );
 };

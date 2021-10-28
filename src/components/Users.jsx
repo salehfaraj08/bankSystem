@@ -16,7 +16,7 @@ const Users = () => {
     if (IsCash === false && users) {
       getcash();
     }
-  }, [users, IsCash]);
+  });
 
 
   const getData = async () => {
@@ -50,13 +50,14 @@ const Users = () => {
         else
           sum += user2.cash
         find = users.find(user => user.id === user2.CustomerId)
-
+        return 0
       })
       find.cash = sum;
       setUsers(customerList)
       console.log(sum);
       console.log(find);
       setIsCash(true);
+      return 0
     })
   };
 
@@ -92,16 +93,15 @@ const Users = () => {
       setUsers(deleteduser);
     }
   };
-  React.useEffect(() => {
-    if (history.location.state !== undefined) {
-      if (history.location.state.reg === true) {
-        console.log('aaaaadddddddddddddddddd');
-        addHandler();
-      }
-      history.location.state.reg = true;
-      console.log('history location22222', history.location);
+  if (history.location.state !== undefined) {
+    if (history.location.state.reg === true) {
+      console.log('aaaaadddddddddddddddddd');
+      addHandler();
     }
-  }, []);
+    history.location.state.reg = false;
+    console.log('history location22222', history.location);
+  }
+  
 
 
   return (
