@@ -13,7 +13,7 @@ const Users = () => {
   }, []);
   React.useEffect(() => {
     console.log('useeffect2', users);
-    if (IsCash === false) {
+    if (IsCash === false && users) {
       getcash();
     }
   }, [users, IsCash]);
@@ -52,7 +52,7 @@ const Users = () => {
         find = users.find(user => user.id === user2.CustomerId)
 
       })
-      find.cash = sum+'';
+      find.cash = sum;
       setUsers(customerList)
       console.log(sum);
       console.log(find);
@@ -68,7 +68,7 @@ const Users = () => {
       name: history.location.state.name,
       country: history.location.state.country,
       age: history.location.state.age,
-      cash : '0'
+      cash: random
     };
     const res = await axios.post(
       "https://6178f183aa7f340017404614.mockapi.io/Customers",
@@ -93,17 +93,17 @@ const Users = () => {
     }
   };
   React.useEffect(() => {
-    if(history.location.state!==undefined){
-      if(history.location.state.reg===true){
+    if (history.location.state !== undefined) {
+      if (history.location.state.reg === true) {
         console.log('aaaaadddddddddddddddddd');
         addHandler();
       }
       history.location.state.reg = true;
-      console.log('history location22222',history.location);
+      console.log('history location22222', history.location);
     }
   }, []);
-  
-  
+
+
   return (
     <div className="container">
       {/* <Register/> */}

@@ -25,7 +25,7 @@ const Register = () => {
 
   return (
     <div className="Register">
-      <div style={{ display: 'flex', justifyContent: 'center' }}><img className='bank' src="http://sundarbanpolicedistrict.org/images/bank.jpeg" /></div>
+      <div style={{ display: 'flex', justifyContent: 'center' }}><img alt='img' className='bank' src="http://sundarbanpolicedistrict.org/images/bank.jpeg" /></div>
       <div className="inputtap">Name:<input
         type="text"
         value={name}
