@@ -1,0 +1,37 @@
+.bank {
+    width: 40rem;
+    height: 20rem;
+    border-radius: 50%;
+}
+
+.bank:hover {
+    transform: scale(1.05);
+}
+
+.Register {
+    align-items: center;
+    color: black;
+}
+
+input {
+    width: 25%;
+    margin-bottom: 10px;
+    background: rgba(0, 0, 0, 0.3);
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 13px;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    box-shadow: inset 0 -5px 45px rgba(100, 100, 100, 0.2), 0 1px 1px rgba(255, 255, 255, 0.2);
+}
+
+.inputtap {
+    margin-top: 2vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}

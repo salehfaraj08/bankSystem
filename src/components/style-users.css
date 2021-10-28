@@ -1,0 +1,45 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background: linear-gradient(to right, orange, white);
+    margin: 1rem;
+    border-radius: 1rem;
+    box-shadow: black 0 0 1rem .2rem;
+    padding: 1rem;
+    font-weight: 600;
+}
+
+.boxs {
+    background: linear-gradient(to right, orange, white);
+    padding: 1rem;
+}
+
+.dele {
+    background: rgb(2, 155, 48);
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    padding: 0.2rem .5rem;
+    border-radius: 0.5rem;
+    box-shadow: black 0 0 0.2rem .05rem;
+    cursor: pointer;
+}
+
+.dele:hover {
+    background: crimson;
+}
+
+.img {
+    width: 150px;
+    border-radius: 1rem;
+    margin-left: 0.5rem;
+}
+
+.img:hover {
+    transform: scale(1.05);
+}
+
+p {
+    font-size: 0.9rem;
+}
